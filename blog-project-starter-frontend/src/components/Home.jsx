@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './common/Navbar'
+//import Navbar from './common/Navbar'
 import BlogProfileImage from "../assets/Blog Website Design.jpg"
 import CSS from "../assets/css-3.png"
 import HTML from "../assets/html.png"
@@ -7,9 +7,9 @@ import DB from "../assets/data-server.png"
 import JS from "../assets/js.png"
 import REACTICON from "../assets/physics.png"
 import NODE from "../assets/node-js.png"
-import P1 from "../assets/p1.jpg"
-import P2 from "../assets/p2.png"
-import P3 from "../assets/p3.png"
+//import P1 from "../assets/p1.jpg"
+//import P2 from "../assets/p2.png"
+//import P3 from "../assets/p3.png"
 import MovieApp from "../assets/MovieApp.png"
 import TaskManagementApp from "../assets/TaskManagementApp.png"
 import WeatherApp from "../assets/WeatherApp.png"
