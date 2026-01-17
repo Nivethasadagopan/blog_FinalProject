@@ -38,7 +38,7 @@ function Blogs() {
     }, []);
 
     const fetchBlogs = () => {
-        axios.get("http://localhost:5000/api/blogs")
+        axios.get("https://blog-finalproject.onrender.com/api/blogs")
             .then((res) => {
                 setBlogs(res.data);
             })
@@ -55,7 +55,7 @@ function Blogs() {
 
     const handleLike = async (blog_id) => {
         try {
-            const response = await axios.patch(`http://localhost:5000/api/blogs/like/${blog_id}`);
+            const response = await axios.patch(`https://blog-finalproject.onrender.com/api/blogs/like/${blog_id}`);
             if (response.status === 200) {
                 fetchBlogs();
             }
@@ -82,7 +82,7 @@ function Blogs() {
             formData.append("image", newImage);
         }
 
-        axios.post("http://localhost:5000/api/blogs", formData, {
+        axios.post("https://blog-finalproject.onrender.com/api/blogs", formData, {
             headers: { "Content-Type": "multipart/form-data" }
         })
             .then((res) => {
@@ -124,7 +124,7 @@ function Blogs() {
 
         try {
             const res = await axios.patch(
-                `http://localhost:5000/api/blogs/${editingBlog._id}`,
+                `https://blog-finalproject.onrender.com/api/blogs/${editingBlog._id}`,
                 formData,
                 { headers: { "Content-Type": "multipart/form-data" } }
             );
@@ -143,7 +143,7 @@ function Blogs() {
     // -----------------------------
     const deleteBlog = async (id) => {
         try {
-            const res = await axios.delete(`http://localhost:5000/api/blogs/${id}`);
+            const res = await axios.delete(`https://blog-finalproject.onrender.com/api/blogs/${id}`);
             showMessage(res.data.message);
             fetchBlogs();
         } catch (error) {
@@ -255,7 +255,7 @@ function Blogs() {
                         {/* SHOW IMAGE IF EXISTS */}
                         {blog.image && (
                             <img
-                                src={`http://localhost:5000${blog.image}`}
+                                src={`https://blog-finalproject.onrender.com${blog.image}`}
                                 className="w-full rounded mb-4"
                                 alt="Blog"
                             />
